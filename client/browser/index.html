@@ -1,6 +1,5 @@
 <template name="browserIndex">
     {{#each images}}
-        x
-        <img src="{{this.url}}">
+        <img class="ui medium circular image" data-id="{{this._id}}" src="{{this.url}}" width="250" height="250">
     {{/each}}
 </template>

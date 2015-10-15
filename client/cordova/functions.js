@@ -7,7 +7,9 @@ var callback = function (buttonIndex) {
             quality: 75,
             sourceType: Camera.PictureSourceType.CAMERA,
             mediaType: Camera.MediaType.PICTURE,
-            allowEdit: false,
+            allowEdit: true,
+            targetWidth: 250,
+            targetHeight: 250,
             encodingType: Camera.EncodingType.PNG,
             popoverOptions: CameraPopoverOptions,
             saveToPhotoAlbum: true,
@@ -17,8 +19,8 @@ var callback = function (buttonIndex) {
         });
 
         function onSuccess(imageData) {
-            var image = document.getElementById('last-image');
-            image.src = "data:image/png;base64," + imageData;
+            //var image = document.getElementById('last-image');
+            //image.src = "data:image/png;base64," + imageData;
             var imagedata = Images.insert("data:image/png;base64," + imageData);
             Meteor.users.update({_id: Meteor.userId()}, {$set: {'profile.image': imagedata._id}});
 
@@ -35,7 +37,9 @@ var callback = function (buttonIndex) {
             quality: 75,
             sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
             mediaType: Camera.MediaType.PICTURE,
-            allowEdit: false,
+            allowEdit: true,
+            targetWidth: 250,
+            targetHeight: 250,
             encodingType: Camera.EncodingType.PNG,
             popoverOptions: CameraPopoverOptions,
             saveToPhotoAlbum: false,
