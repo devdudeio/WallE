@@ -1,6 +1,31 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:200);
 
-body{
+body {
     font-family: 'Work Sans', sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    float: left;
+    overflow: hidden
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.for6col article {
+    width: 16.66%;
+}
+
+.for4col article {
+    width: 25%;
+}
+
+.for2col article {
+    width: 50%
 }

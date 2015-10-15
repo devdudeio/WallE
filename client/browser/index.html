@@ -1,5 +1,7 @@
 <template name="browserIndex">
+    <h1>Image WallE</h1>
     {{#each images}}
-        <img class="ui medium circular image" data-id="{{this._id}}" src="{{this.url}}" width="250" height="250">
+        <img class="ui image" data-id="{{this._id}}" src="{{this.url}}" width="250">
     {{/each}}
 </template>
+
