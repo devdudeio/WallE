@@ -8,3 +8,5 @@ App.info({
     email: 'robert.lech@icloud.com',
     website: 'http://example.com'
 });
+
+App.accessRule('*');

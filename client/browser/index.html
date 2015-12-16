@@ -1,7 +1,43 @@
 <template name="browserIndex">
-    <h1>Image WallE</h1>
-    {{#each images}}
-        <img class="ui image" data-id="{{this._id}}" src="{{this.url}}" width="250">
-    {{/each}}
-</template>
+    <h1 style="text-align: center;">WallE</h1>
 
+    <h3 style="text-align: center;">The fancy Image Wall</h3>
+    <style>
+        body {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-weight: 300;
+            background: #00d2ff; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #00d2ff, #3a7bd5); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #00d2ff, #3a7bd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            color: #fff;
+        }
+
+        #container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .item {
+            background: #fff;
+            width: 320px;
+            height: 320px;
+            overflow: hidden;
+            border: 2px solid #212121;
+
+        }
+
+        .bg {
+            overflow: hidden;
+
+        }
+
+    </style>
+    <div id="container">
+        {{#each images}}
+            <div class="item">
+                <img class="bg" data-id="{{this._id}}" src="{{this.url}}">
+            </div>
+        {{/each}}
+    </div>
+</template>
